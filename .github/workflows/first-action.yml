@@ -1,0 +1,15 @@
+# .github/workflows/first-action.yml
+name: First Workflow #name of the workflow
+# https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows
+
+on: workflow_dispatch #trigger to run the workflow 'workflow_dispatch' means manual trigger
+
+jobs: # jobs definition
+
+  first-job: #name of job
+    runs-on: ubuntu-latest # env for running job https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners
+    steps: # list of steps in the job
+      - name: Print Greeting #name of step
+        run: echo "Hello World" #action
+      - name: Print Goodbye
+        run: echo "Done - goodbye"
